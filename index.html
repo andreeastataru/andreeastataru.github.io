@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cv-container">
+      <div class="left-panel">
+        <div class="profile">
+          <img class="cv-image" src="./poza_cv.jpg" />
+          <h1>Tataru Andreea</h1>
+          <span>Font-end developer</span>
+        </div>
+        <ul class="tabs">
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Experience</a></li>
+          <li><a href="#">Soft skills</a></li>
+        </ul>
+        <div class="main-info">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <span></span>
+              <span>Bucharest, Romania</span>
+            </li>
+            <li>
+              <span></span>
+              <span>0734783120</span>
+            </li>
+            <li>
+              <span></span>
+              <span>andreeatataru13@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-panel">
+        <form action="">
+          <div>
+            <label for="subscriberEmail">Enter you email</label>
+            <input
+              type="email"
+              required
+              name="email"
+              id="subscriberEmail"
+              placeholder="yoru@email.com"
+            />
+          </div>
+          <div>
+            <label for="subscriber">Name:</label>
+            <input
+              type="text"
+              name="nume"
+              id="subscriber"
+              placeholder="full name"
+            />
+          </div>
+          <button type="submit">Subscribe</button>
+        </form>
+
+        <div class="skills">
+          <h2 class="skills-title">Skills</h2>
+          <ul>
+            <li style="font-weight: bold; font-style: italic; color: blue">
+              HTML
+            </li>
+            <li style="font-weight: bold; font-style: italic; color: blue">
+              CSS
+            </li>
+            <li>JS</li>
+          </ul>
+        </div>
+        <div class="lang">
+          <h2 class="lang-title">Known Languages</h2>
+          <table border="1">
+            <tr>
+              <th>Language</th>
+              <th>Level</th>
+            </tr>
+            <tr>
+              <td>Romanian</td>
+              <td>Native</td>
+            </tr>
+            <tr>
+              <td>English</td>
+              <td>Proficient</td>
+            </tr>
+            <tr>
+              <td>Russian</td>
+              <td>So so</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

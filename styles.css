@@ -1,0 +1,192 @@
+html,
+body,
+.cv-container {
+  height: 100%;
+}
+
+h1 {
+  margin: 0 0 30px;
+}
+
+body {
+  margin: 0;
+  background-color: #fdfdfd;
+}
+
+body,
+span,
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  margin: 0 0 4px;
+}
+
+.left-panel {
+  position: relative;
+  /* padding: 20px 0 20px 20px; */
+  background-color: #517c79;
+  border-radius: 0 20px 20px 0;
+}
+
+/* .left-panel:after {
+  content: "";
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  right: -20px;
+  top: 0;
+  background-color: #517c79;
+  border-radius: 0 40px 40px 0;
+} */
+
+.profile {
+  text-align: center;
+  padding: 30px;
+}
+
+.profile span {
+  font-size: 20px;
+}
+
+.cv-image {
+  max-height: 200px;
+  border-radius: 100%;
+  max-width: 200px;
+  object-fit: cover;
+}
+
+.cv-container {
+  display: flex;
+}
+
+.tabs {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tabs li {
+  padding: 16px 30px;
+}
+
+.tabs li:not(:last-child) {
+  border-bottom: 1px solid #436462;
+}
+
+.tabs li:hover {
+  background-color: #598985;
+  cursor: pointer;
+}
+
+.tabs button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+.main-info {
+  padding: 30px;
+}
+
+.main-info h2 {
+  font-weight: 600;
+}
+
+.main-info h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  margin-top: 6px;
+  display: block;
+  background-color: #436462;
+}
+
+.main-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.main-info {
+  font-size: 16px;
+}
+
+.main-info li {
+  margin-bottom: 18px;
+}
+
+.right-panel {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+.skills {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #7fbbb6;
+  border: 1px solid #517c79;
+}
+
+.skills-title {
+  color: #517c79;
+}
+
+.lang {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(195, 183, 255);
+  border: 1px solid rgb(148, 127, 255);
+}
+
+.lang-title {
+  color: rgb(148, 127, 255);
+}
+
+/**************/
+header,
+footer,
+#content {
+  padding: 4px;
+  margin: 2px;
+}
+#content > div,
+#side-menu > section {
+  padding: 4px;
+  margin: 2px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #f3f2ef;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+#side-menu {
+  flex: 1;
+}
+#main {
+  flex: 2;
+}
