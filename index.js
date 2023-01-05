@@ -82,22 +82,23 @@ var info = getInfo("Andreea");
 
 /*************** Curs 2 */
 
-function displaySkills() {
-  document.getElementById("skills").style.display = "block";
+function hideAllPages() {
+  document.getElementById("skills").style.display = "none";
   document.getElementById("lang").style.display = "none";
   document.getElementById("experience").style.display = "none";
+}
+
+function displaySkills() {
+  hideAllPages();
+  document.getElementById("skills").style.display = "block";
 }
 
 function displayExperience() {
+  hideAllPages();
   document.getElementById("experience").style.display = "block";
-  document.getElementById("lang").style.display = "none";
-  document.getElementById("skills").style.display = "none";
 }
 
 function displayLang() {
-  document.getElementById("skills").style.display = "none";
+  hideAllPages();
   document.getElementById("lang").style.display = "block";
-  document.getElementById("experience").style.display = "none";
 }
-
-displayLang();
