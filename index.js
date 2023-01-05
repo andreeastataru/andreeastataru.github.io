@@ -1,61 +1,72 @@
-var skillsEl = document.getElementById("skills-list");
+// accesare element dupa id // punem intr-o variabila ca sa fie stocat rezultatul in ceva si sa nu se piarda
+var skills = document.getElementById("skills-list");
 
-//skillsEl.style.display = "none";
-skillsEl.style.color = "#314c4a";
-skillsEl.style.fontSize = "25px";
+// adaugare css pe variabila care contine elementul cu id-ul skills-list
+/*skills.style.display = "none";
+skills.style.color = "#314c4a";
+skills.style.fontSize = "24px";*/
 
+// adaugare css fara variabila
 //document.getElementById("skills-list").style.display = "none";
 
-// var oldText = skillsEl.innerHTML;
-// skillsEl.innerHTML = oldText + "<li>JS</li>";
-//skillsEl.innerHTML = skillsEl.innerHTML + "<li>JS</li>";
+//schimbare continut cu ajutorul unei variabile noi in care salvam informatiile din variabila skills plus comanda
+// de modificare text pentru a nu o altera pe cea veche
+var newText = skills.innerHTML;
+//skills.innerHTML = newText + "<li>JS</li>"; // !!!! de ce aici nu merge cu variabila inainte de egal
 
-// skillsEl.innerHTML += "<li>HTML</li>";
-// skillsEl.innerHTML += "<li>CSS</li>";
-// skillsEl.innerHTML += "<li>JS</li>";
+//exemplu fara variabila noua cu adaugare de text nou
+// skills.innerHTML = skills.innerHTML + "<li>JS</li>";
 
-var skills = ["HTML", "CSS", "JS", "Drive"];
+//adaugare toate informatiile din lista fara a mai exista ceva in html
+/*skills.innerHTML += "<li>Html</li>";
+skills.innerHTML += "<li>CSS</li>";
+skills.innerHTML += "<li>JavaScript</li>";*/
 
-skills[0]; // html
+// creare array cu elementele listei
 
-// skillsEl.innerHTML += "<li>" + skills[0] + "</li>";
-// skillsEl.innerHTML += "<li>" + skills[1] + "</li>";
-// skillsEl.innerHTML += "<li>" + skills[2] + "</li>";
+var skillsList = ["Html", "CSS", "JavaScript"];
 
+//acesare primul element din lista
+skillsList[0];
+
+//adaugare elemente in lista din vector
+/*skills.innerHTML += "<li>" + skillsList[0] + "</li>";
+skills.innerHTML += "<li>" + skillsList[1] + "</li>";
+skills.innerHTML += "<li>" + skillsList[2] + "</li>";*/
+
+// creare variabila pentru a retine tote 3 li-urile fara a face ceva cu ele ca apoi sa le adaugam in elementul skills
 var skillsHTML = "";
+/*skillsHTML += "<li>" + skillsList[0] + "</li>";
+skillsHTML += "<li>" + skillsList[1] + "</li>";
+skillsHTML += "<li>" + skillsList[2] + "</li>";
+console.info(skillsHTML);
+skills.innerHTML = skillsHTML;*/
 
-// skillsHTML += "<li>" + skills[0] + "</li>";
-// skillsHTML += "<li>" + skills[1] + "</li>";
-// skillsHTML += "<li>" + skills[2] + "</li>";
-//console.info(skillsHTML);
-//skillsEl.innerHTML = skillsHTML;
+// declaram o variabila i care incepe de la 0 si o incrementam dupa fiecaree element pana parcurgem tot vector
+var i = 0;
+/*skills.innerHTML += "<li>" + skillsList[i] + "</li>";
+i++;
+skills.innerHTML += "<li>" + skillsList[i] + "</li>";
+i++;
+skills.innerHTML += "<li>" + skillsList[i] + "</li>";*/ // o data executat nu se mai executa decat daca il rescriu
 
-// var i = 0;
-// skillsHTML += "<li>" + skills[i] + "</li>";
-// i++;
-// skillsHTML += "<li>" + skills[i] + "</li>";
-// i++;
-// skillsHTML += "<li>" + skills[i] + "</li>";
-// skillsEl.innerHTML = skillsHTML;
+//adaugare diferite chestii la elementele din vector
+/*skills.innerHTML += "<li>" + (i + 1) + ")" + skillsList[i] + "</li>";
+i++;
+skills.innerHTML += "<li>" + i + 1 + ")" + skillsList[i] + "</li>";*/
 
-// var i = 0;
-// skillsHTML += "<li>" + (i + 1) + ")" + skills[i] + "</li>";
-// i++;
-// skillsHTML += "<li>" + i + 1 + ")" + skills[i] + "</li>";
-// i++;
-// skillsHTML += "<li>" + skills[i] + "</li>";
-// skillsEl.innerHTML = skillsHTML;// o data executat nu se mai executa decat daca il rescriu
-
-// for (var i = 0; i < 4; ) {
-//   skillsHTML += "<li>" + skills[i] + "</li>";
-//   i++;
-// }
-// skillsEl.innerHTML = skillsHTML;
-
-for (var i = 0; i < skills.length; i++) {
-  skillsHTML += "<li>" + skills[i] + "</li>";
+// folosim for pentru a adauga elementele din vector in lista
+/*for (var i = 0; i < 3; ) {
+  skillsHTML += "<li>" + skillsList[i] + "</li>";
+  i++;
 }
-skillsEl.innerHTML = skillsHTML;
+skills.innerHTML = skillsHTML;*/
+
+//for cu length in loc de nr fix
+for (var i = 0; i < skillsList.length; i++) {
+  skillsHTML += "<li>" + skillsList[i] + "</li>";
+}
+skills.innerHTML = skillsHTML;
 
 // function - nume functie - parametru ( ii spun cv functiei)
 // daca eu o intreb ceva poate sa imi raspunda cu ceva (return)
