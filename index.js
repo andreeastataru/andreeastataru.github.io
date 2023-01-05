@@ -79,3 +79,7 @@ function getInfo(name) {
 }
 
 var info = getInfo("Andreea");
+
+/*************** Curs 2 */
+
+document.getElementById("skills").style.display = "block";

@@ -190,3 +190,9 @@ body {
 #main {
   flex: 2;
 }
+
+/* Curs 2 */
+
+.page {
+  display: none;
+}
