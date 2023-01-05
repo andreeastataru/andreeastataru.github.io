@@ -88,17 +88,21 @@ function hideAllPages() {
   document.getElementById("experience").style.display = "none";
 }
 
+function showElementById(id) {
+  document.getElementById(id).style.display = "block";
+}
+
 function displaySkills() {
   hideAllPages();
-  document.getElementById("skills").style.display = "block";
+  showElementById("skills");
 }
 
 function displayExperience() {
   hideAllPages();
-  document.getElementById("experience").style.display = "block";
+  showElementById("experience");
 }
 
 function displayLang() {
   hideAllPages();
-  document.getElementById("lang").style.display = "block";
+  showElementById("lang");
 }
