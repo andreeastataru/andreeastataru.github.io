@@ -80,12 +80,19 @@ function getInfo(name) {
 
 var info = getInfo("Andreea");
 
-/*************** Curs 2 */
+/*************** Curs 2 si 3 */
+
+var pagesIds = ["skills", "lang", "experience"];
+
+function hidePage(id) {
+  hide(id);
+}
 
 function hideAllPages() {
-  hide("skills");
-  hide("lang");
-  hide("experience");
+  pageIds.forEach(h);
+  // hide("skills");
+  // hide("lang");
+  // hide("experience");
 }
 
 function hide(id) {
