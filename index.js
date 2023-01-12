@@ -82,17 +82,18 @@ var info = getInfo("Andreea");
 
 /*************** Curs 2 si 3 */
 
-var pagesIds = ["skills", "lang", "experience"];
+var pageIds = ["skills", "lang", "experience"];
 
-function hidePage(id) {
-  hide(id);
-}
+// function hidePage(id) {
+//   hide(id);
+// }
 
 function hideAllPages() {
-  pageIds.forEach(h);
-  // hide("skills");
-  // hide("lang");
-  // hide("experience");
+  //pageIds.forEach(hidePage);
+  pageIds.forEach(function (pageId) {
+    //anonymus function - nu are nume
+    hide(pageId);
+  });
 }
 
 function hide(id) {
