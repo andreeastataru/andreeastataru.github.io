@@ -113,9 +113,9 @@ function showElementById(id) {
 //   displayPages("experience");
 // }
 
-function displayLang() {
-  displayPages("lang");
-}
+// function displayLang() {
+//   displayPages("lang");
+// }
 
 function displayPages(id) {
   hideAllPages();
