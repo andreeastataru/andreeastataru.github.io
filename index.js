@@ -90,6 +90,10 @@ var pageIds = ["skills", "lang", "experience"];
 
 function hideAllPages() {
   //pageIds.forEach(hidePage);
+  var pages = document.querySelectorAll(".page");
+  pages.forEach(function (page) {
+    hide(page.id);
+  });
   pageIds.forEach(function (pageId) {
     //anonymus function - nu are nume
     hide(pageId);
@@ -101,7 +105,7 @@ function hide(id) {
   document.getElementById(id).style.display = "none";
 }
 
-function showElementById(id) {
+function show(id) {
   document.getElementById(id).style.display = "block";
 }
 
