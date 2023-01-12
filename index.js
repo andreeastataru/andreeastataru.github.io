@@ -105,17 +105,19 @@ function showElementById(id) {
   document.getElementById(id).style.display = "block";
 }
 
-function displaySkills() {
-  hideAllPages();
-  showElementById("skills");
-}
+// function displaySkills() {
+//   displayPages("skills");
+// }
 
-function displayExperience() {
-  hideAllPages();
-  showElementById("experience");
-}
+// function displayExperience() {
+//   displayPages("experience");
+// }
 
 function displayLang() {
+  displayPages("lang");
+}
+
+function displayPages(id) {
   hideAllPages();
-  showElementById("lang");
+  show(id);
 }
