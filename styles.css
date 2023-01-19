@@ -62,11 +62,9 @@ h2 {
   background-color: #314c4a;
 }
 
-.main-nav li {
-  padding: 16px 30px;
-}
-
 .main-nav li a {
+  display: inline-block;
+  padding: 16px 30px;
   text-decoration: none;
   color: #f3f2ef;
 }

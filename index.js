@@ -200,3 +200,26 @@ function hidePages() {
     hide(sglPage.id);
   });
 }
+
+/* Course 4 */
+
+// function initMenu() {
+//   console.warn("init menu");
+
+//   document.body.addEventListener("click", function (e) {
+//     // e is pointer event
+//     console.warn("click", e.target.matches("a")); //display only the target
+//   });
+// }
+
+function initMenu() {
+  document.getElementById("menu").addEventListener("click", function (e) {
+    if (e.target.matches("a")) {
+      var id = e.target.getAttribute("data-page"); //e.target.dataset.page doar daca folosim data-*///putem folosi orice in loc de data-page
+      displayPages(id);
+    }
+  });
+}
+
+displayPage("education");
+initMenu();
