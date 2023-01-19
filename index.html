@@ -23,12 +23,16 @@
           <h1>Tataru Andreea</h1>
           <span>Font-end developer</span>
         </div>
-        <ul class="tabs">
-          <li><a onclick="displayPages('lang')" href="#">Education</a></li>
+        <ul id="menu" class="tabs">
+          <li><a onclick="displayPage('education')" href="#">Education</a></li>
           <li>
-            <a onclick="displayPages('experience')" href="#">Experience</a>
+            <a onclick="displayPage('experience')" href="#"
+              >Professional experience and skills</a
+            >
           </li>
-          <li><a href="#" onclick="displayPages('skills')">Soft skills</a></li>
+          <li>
+            <a href="#" onclick="displayPage('history')">Career history </a>
+          </li>
         </ul>
         <div class="main-info">
           <h2>Contact</h2>
@@ -49,56 +53,15 @@
         </div>
       </div>
       <div class="right-panel">
-        <form action="">
-          <div>
-            <label for="subscriberEmail">Enter you email</label>
-            <input
-              type="email"
-              required
-              name="email"
-              id="subscriberEmail"
-              placeholder="yoru@email.com"
-            />
-          </div>
-          <div>
-            <label for="subscriber">Name:</label>
-            <input
-              type="text"
-              name="nume"
-              id="subscriber"
-              placeholder="full name"
-            />
-          </div>
-          <button type="submit">Subscribe</button>
-        </form>
         <div class="main">
-          <div id="skills" class="page skills">
+          <div id="education" class="page education">
             <h2 class="skills-title">Skills</h2>
             <ul id="skills-list"></ul>
           </div>
-          <div id="lang" class="page lang">
-            <h2 class="lang-title">Known Languages</h2>
-            <table border="1">
-              <tr>
-                <th>Language</th>
-                <th>Level</th>
-              </tr>
-              <tr>
-                <td>Romanian</td>
-                <td>Native</td>
-              </tr>
-              <tr>
-                <td>English</td>
-                <td>Proficient</td>
-              </tr>
-              <tr>
-                <td>Russian</td>
-                <td>So so</td>
-              </tr>
-            </table>
+          <div id="experience" class="page">
+            Profetional experience and skills
           </div>
-          <div id="experience" class="page">experience</div>
-          <div id="projects" class="page"></div>
+          <div id="history" class="page">Career history</div>
         </div>
       </div>
     </div>

@@ -80,48 +80,123 @@ function getInfo(name) {
 
 var info = getInfo("Andreea");
 
-/*************** Curs 2 si 3 */
+/*********** Curs 2*/
 
-var pageIds = ["skills", "lang", "experience"];
+/* Work with each page separately */
 
-// function hidePage(id) {
-//   hide(id);
-// }
-
-function hideAllPages() {
-  //pageIds.forEach(hidePage);
-  var pages = document.querySelectorAll(".page");
-  pages.forEach(function (page) {
-    hide(page.id);
-  });
-  pageIds.forEach(function (pageId) {
-    //anonymus function - nu are nume
-    hide(pageId);
-  });
+/*function hidePages() {
+  document.getElementById("education").style.display = "none";
+  document.getElementById("experience").style.display = "none";
+  document.getElementById("history").style.display = "none";
 }
 
-function hide(id) {
-  //functie utlilitara
-  document.getElementById(id).style.display = "none";
+function displayEducation() {
+  hidePages();
+  document.getElementById("education").style.display = "block";
 }
+
+function displayExperience() {
+  hidePages();
+  document.getElementById("experience").style.display = "block";
+}
+
+function displayHistory() {
+  hidePages();
+  document.getElementById("history").style.display = "block";
+}*/
+
+/* Work with multiple pages at a time using parameters, fewer lines of code, send args in html function*/
+
+/*
+  function hidePages() {
+    document.getElementById("education").style.display = "none";
+    document.getElementById("experience").style.display = "none";
+    document.getElementById("history").style.display = "none";
+  }
+
+  function displayPages(id) {
+    hidePages();
+    document.getElementById(id).style.display = "block";
+  }
+*/
+
+/*************** Curs 3 */
+
+/* Refacotor hide pages function, use args in this page */
 
 function show(id) {
+  // functie utilitara - ma ajuta in functia mama
   document.getElementById(id).style.display = "block";
 }
 
-// function displaySkills() {
-//   displayPages("skills");
-// }
+function hide(id) {
+  // functie utilitara
+  document.getElementById(id).style.display = "none";
+}
 
-// function displayExperience() {
-//   displayPages("experience");
-// }
+/*function hidePages() {
+  hide("education");
+  hide("experience");
+  hide("history");
+}*/
 
-// function displayLang() {
-//   displayPages("lang");
-// }
+/*function displayEducation() {
+  hidePages();
+  show("education");
+}
 
-function displayPages(id) {
-  hideAllPages();
+function displayExperience() {
+  hidePages();
+  show("experience");
+}
+
+function displayHistory() {
+  hidePages();
+  show("history");
+}*/
+
+/* Use an array to store the pages in order to simplify functions */
+
+var pages = ["education", "experience", "history"];
+
+/*function h(id, i) {//parametrii din functie i-am declarat in () deoarece sunt folositi in console.warn, 
+  //daca in console.warn se schimba ceva se schimba si in functia parinte
+  console.warn("H", id, i); // pot da ce nume vreau la parametrii, va stii ce sunt deoarece asa e formata aceasta functie
+}*/
+
+/*function hidePages() {
+  //pages.forEach(h); // mi se afiseaza pentru fiecare element din array H variabila = education/experience/history si indexul ei = 1/2/3
+  pages.forEach(hide); // nu mai pun parametru la functie
+}*/
+
+/*function hidePages() {
+  for ( var i=0; i < pages.length; i++ ) {
+    document.getElementById(pages[i]).style.display = "none";
+  }
+}*/
+
+// functiile hide si show au ramas din ex precedent
+
+/*function hidePages() {
+  // pages.forEach(function hide(id) {
+  //   hide(id);
+  // });
+  //daca am o functie in foreach pot ignora numele functiei//anonymus function
+  pages.forEach(function (id) {
+    hide(id);
+  });
+}*/
+
+function displayPage(id) {
+  hidePages();
   show(id);
+}
+
+/* Refactor hidePaages in order tot not pe dependent on the id param */
+
+function hidePages() {
+  var allPages = document.querySelectorAll(".page"); //iterate through every element with class "page"
+  allPages.forEach(function (sglPage) {
+    hide(sglPage.id);
+  });
 }
