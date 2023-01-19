@@ -30,28 +30,15 @@ h2 {
   margin: 0 0 4px;
 }
 
-.left-panel {
-  position: relative;
+.header {
   /* padding: 20px 0 20px 20px; */
   background-color: #517c79;
-  border-radius: 0 20px 20px 0;
 }
 
-/* .left-panel:after {
-  content: "";
-  width: 20px;
-  height: 100%;
-  position: absolute;
-  display: inline-block;
-  right: -20px;
-  top: 0;
-  background-color: #517c79;
-  border-radius: 0 40px 40px 0;
-} */
-
 .profile {
-  text-align: center;
-  padding: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
 }
 
 .profile span {
@@ -59,35 +46,37 @@ h2 {
 }
 
 .cv-image {
-  max-height: 200px;
-  border-radius: 100%;
-  max-width: 200px;
+  max-height: 130px;
+  border-radius: 50%;
+  max-width: 130px;
   object-fit: cover;
+  margin-right: 40px;
 }
 
-.cv-container {
+.main-nav {
   display: flex;
-}
-
-.tabs {
+  justify-content: center;
   list-style: none;
   padding-left: 0;
+  margin: 0;
+  background-color: #314c4a;
 }
 
-.tabs li {
+.main-nav li {
   padding: 16px 30px;
 }
 
-.tabs li:not(:last-child) {
-  border-bottom: 1px solid #436462;
+.main-nav li a {
+  text-decoration: none;
+  color: #f3f2ef;
 }
 
-.tabs li:hover {
+.main-nav li:hover {
   background-color: #598985;
   cursor: pointer;
 }
 
-.tabs button {
+.main-nav button {
   background-color: transparent;
   border: none;
   font-size: 16px;
@@ -123,8 +112,7 @@ h2 {
   margin-bottom: 18px;
 }
 
-.right-panel {
-  flex-grow: 1;
+.page-wrapper {
   padding: 40px;
 }
 
