@@ -123,6 +123,10 @@ h2 {
   border: 1px solid #517c79;
 }
 
+#skills-list span {
+  font-weight: 700;
+}
+
 .skills-title {
   color: #517c79;
 }

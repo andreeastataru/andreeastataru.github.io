@@ -63,10 +63,10 @@ skills.innerHTML += "<li>" + i + 1 + ")" + skillsList[i] + "</li>";*/
 skills.innerHTML = skillsHTML;*/
 
 //for cu length in loc de nr fix
-for (var i = 0; i < skillsList.length; i++) {
+/*for (var i = 0; i < skillsList.length; i++) {
   skillsHTML += "<li>" + skillsList[i] + "</li>";
 }
-skills.innerHTML = skillsHTML;
+skills.innerHTML = skillsHTML;*/
 
 // function - nume functie - parametru ( ii spun cv functiei)
 // daca eu o intreb ceva poate sa imi raspunda cu ceva (return)
@@ -203,23 +203,93 @@ function hidePages() {
 
 /* Course 4 */
 
-// function initMenu() {
-//   console.warn("init menu");
+// Ascultam evenimentul de click
+/*function initMenu() {
+  //la body nu am nevoie sa zic getElementBy ceva sau querySelector
+  console.warn("init menu"); // se apeleaza o singura data pentru ca am apelat-o mai jos
 
-//   document.body.addEventListener("click", function (e) {
-//     // e is pointer event
-//     console.warn("click", e.target.matches("a")); //display only the target
-//   });
-// }
+  document.body.addEventListener("click", function () {
+    // al doilea param reprezinta cine asculta evenimentul de click
+    console.warn("click"); //punem o consola ca sa aflam cand se apeleaza functia -> de fiecare data cand dau click pe body
+  });
+}
 
-function initMenu() {
+initMenu();*/
+
+// Setam clickul pe un anumit element
+
+/*function initMenu() {
+  document.body.addEventListener("click", function (e) {
+    //am adaugat un parametru event
+    console.warn("click", e);// ne arata toate tipurile de evnimente si ne sugereaza care au fost folosite si care nu
+    //ne arata si elementul html pe care am dat click care se numeste target
+  });
+}
+
+initMenu();*/
+
+// Afisez doar elementul html pe care s-a dat click
+
+/*function initMenu() {
   document.getElementById("menu").addEventListener("click", function (e) {
+    // in loc de body ma duc la cel mai apropiat parinte al tututot elementelor mele
+    //console.warn("click", e.target); // afisam doar targetul obiectului adica elementul html pe care am dat click
+    //console.warn("click", e.target.matches("a")); // ma anunta daca am dat sau nu click pe a
     if (e.target.matches("a")) {
-      var id = e.target.getAttribute("data-page"); //e.target.dataset.page doar daca folosim data-*///putem folosi orice in loc de data-page
-      displayPages(id);
+      console.warn("click", e.target); //executam consola numai cand dau click pe a
     }
   });
 }
 
-displayPage("education");
+initMenu();*/
+
+// Afisez pagina in functie de id-ul pe care dam click
+//data-page este element custom
+
+function initMenu() {
+  document.getElementById("menu").addEventListener("click", function (e) {
+    if (e.target.matches("a")) {
+      //console.warn("click", e.target.innerText); // ne arata textul din tag
+      var id = e.target.getAttribute("data-page"); //citesc atributul din data-page ( cel care ma intereseaza )
+      // pentru elementele de tip data-* putem folosi si e.target.dataset.page
+      console.warn("click", id, e.target);
+      displayPage(id);
+    }
+  });
+}
+
 initMenu();
+displayPage("education");
+
+//var skills = ["HTML", "CSS", "JavaScript"];
+
+var skills = [
+  { name: "HTML", endorcements: 5 },
+  { name: "CSS", endorcements: 2 },
+  { name: "JavaScript", endorcements: 1 },
+];
+
+var skillsEl = document.getElementById("skills-list");
+skillsEl.innerHTML = skillsHTML;
+skillsHTML = ""; //valoarea lui skillsHTML acum e nula, daca nu stabilesc alta valoare ea va ramane cu valoare ei pt totdeauna
+
+/*for (var i = 0; i < skills.length; i++) {
+  skillsHTML +=
+    "<li>" + skills[i].name + " - " + skills[i].endorcements + "</li>";
+}*/
+
+/*skills.forEach(function (skill) {
+  console.info(skill);
+  skillsHTML += "<li>" + skill.name + " - " + skill.endorcements + "</li>";
+});*/
+
+//skillsEl.innerHTML = skillsHTML;
+
+var s = skills.map(function (skill) {
+  //functia map returneaza un array nou// functia map tranforma din ceva in altceva, primeste un skill si il transforma in
+  //return "<li>" + skill.name + " - <span>" + skill.endorcements + "</span></li>";
+  return `<li> ${skill.name} <span> - ${skill.endorcements} </span></li>`;
+});
+console.warn("s", s);
+
+skillsEl.innerHTML = s.join("");
