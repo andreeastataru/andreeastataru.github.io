@@ -263,11 +263,13 @@ displayPage("education");
 
 //var skills = ["HTML", "CSS", "JavaScript"];
 
-var skills = [
-  { name: "HTML", endorcements: 5 },
-  { name: "CSS", endorcements: 2 },
-  { name: "JavaScript", endorcements: 1 },
-];
+// var skills = [
+//   { name: "HTML", endorcements: 5 },
+//   { name: "CSS", endorcements: 2 },
+//   { name: "JavaScript", endorcements: 1 },
+// ];
+
+var skills = [];
 
 var skillsEl = document.getElementById("skills-list");
 skillsEl.innerHTML = skillsHTML;
@@ -285,11 +287,44 @@ skillsHTML = ""; //valoarea lui skillsHTML acum e nula, daca nu stabilesc alta v
 
 //skillsEl.innerHTML = skillsHTML;
 
-var s = skills.map(function (skill) {
+/*var s = skills.map(function (skill) {
   //functia map returneaza un array nou// functia map tranforma din ceva in altceva, primeste un skill si il transforma in
   //return "<li>" + skill.name + " - <span>" + skill.endorcements + "</span></li>";
   return `<li> ${skill.name} <span> - ${skill.endorcements} </span></li>`;
 });
-console.warn("s", s);
+//console.warn("s", s);
 
-skillsEl.innerHTML = s.join("");
+skillsEl.innerHTML = s.join("");*/
+
+/* Course 5 */
+
+var skills = [];
+
+/*var r1 = fetch("skills.json");
+r1.then(function (raspuns) {
+  var r2 = raspuns.json();
+  console.warn("gata?", r2);
+  r2.then(function (r3) {
+    console.warn("json?", r3);
+  });
+});*/
+console.warn("r1", r1); // primesc un promise// apare prima data promise-ul si apoi "gata"
+//.then -> cu rezultatul dinainte de punct fac ceva cu urmatoarea functie
+
+var r1 = fetch("skills.json");
+r1.then(function (raspuns) {
+  var r2 = raspuns.json();
+  // console.warn("gata?", r2);
+  r2.then(function (skills) {
+    //console.warn("skills?", skills);
+    displaySkills(skills);
+  });
+});
+console.warn("r1", r1);
+
+function displaySkills(skills) {
+  var s = skills.map(function (skill) {
+    return `<li> ${skill.name} <span> - ${skill.endorcements} </span></li>`;
+  });
+  skillsEl.innerHTML = s.join("");
+}
