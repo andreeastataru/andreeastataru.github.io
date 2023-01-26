@@ -316,6 +316,7 @@ r1.then(function (raspuns) {
   const r2 = raspuns.json();
   // console.warn("gata?", r2);
   r2.then(function (skills) {
+    // r2.then((skills) =>{}
     //console.warn("skills?", skills);
     displaySkills(skills);
   });
@@ -328,3 +329,11 @@ function displaySkills(skills) {
   });
   skillsEl.innerHTML = s.join("");
 }
+
+const exFunction1 = function () {
+  return "arrow";
+};
+
+const exFunction2 = () => {
+  return "arrow";
+};
