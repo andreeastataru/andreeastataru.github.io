@@ -311,9 +311,9 @@ r1.then(function (raspuns) {
 console.warn("r1", r1); // primesc un promise// apare prima data promise-ul si apoi "gata"
 //.then -> cu rezultatul dinainte de punct fac ceva cu urmatoarea functie
 
-var r1 = fetch("skills.json");
+const r1 = fetch("skills.json");
 r1.then(function (raspuns) {
-  var r2 = raspuns.json();
+  const r2 = raspuns.json();
   // console.warn("gata?", r2);
   r2.then(function (skills) {
     //console.warn("skills?", skills);
@@ -323,7 +323,7 @@ r1.then(function (raspuns) {
 console.warn("r1", r1);
 
 function displaySkills(skills) {
-  var s = skills.map(function (skill) {
+  const s = skills.map(function (skill) {
     return `<li> ${skill.name} <span> - ${skill.endorcements} </span></li>`;
   });
   skillsEl.innerHTML = s.join("");
